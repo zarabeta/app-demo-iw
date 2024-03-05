@@ -19,7 +19,15 @@ import { useEffect, useState } from "react";
                 return (
                     <tr key={usuario.id.toString()}>
                         <td>
-                            <img src={usuario.avatar} alt="Avatar" />
+                        <img
+                        src={ usuario.avatar }
+                        alt={ usuario.first_name }
+                        style={{
+                            width: 50,
+                            borderRadius: 100
+                        }}
+                    >
+                    </img>
                         </td>
                         <td>
                             {usuario.first_name} {usuario.last_name}
@@ -35,7 +43,7 @@ import { useEffect, useState } from "react";
     <>
        
         <h3>Usuarios</h3>
-        <table className="table" style={{ width: '200%'}}>
+        <table className="table" style={{ width: '300%'}}>
             <thead>
                 <tr>
                     <th scope="col">
